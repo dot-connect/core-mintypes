@@ -1,5 +1,8 @@
 ﻿{
-  "version": "1.0.0-*",
+  "title": ".Net Core MimeTypes",
+  "copyright": "DotConnect",
+  "description": ".Net Core MimeTypes",
+  "version": "1.0.0-final-01",
 
   "dependencies": {
     "NETStandard.Library": "1.6.0"
@@ -9,5 +12,11 @@
     "netstandard1.6": {
       "imports": "dnxcore50"
     }
+  },
+
+  "scripts": {
+    "postcompile": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
   }
 }
